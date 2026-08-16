@@ -9,6 +9,18 @@ on:
       next_version_minor:
         required: false
         type: string
+  workflow_dispatch:
+    inputs:
+      next_version_major:
+        description: "Major version to build with (leave empty to use the default version)"
+        required: false
+        default: ""
+        type: string
+      next_version_minor:
+        description: "Minor version to build with (leave empty to use the default version)"
+        required: false
+        default: ""
+        type: string
 
 env:
   VCPKG_ROOT: "${{github.workspace}}/dependencies/vcpkg"
